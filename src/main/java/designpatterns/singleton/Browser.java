@@ -9,7 +9,8 @@ public class Browser {
     private Browser(){}
 
     //create static method to provide access to objects
-    public static Browser getInstance()
+    //synchronized added for thread safety
+    public synchronized static Browser getInstance()
     {
         if(browser == null){
             browser = new Browser();
